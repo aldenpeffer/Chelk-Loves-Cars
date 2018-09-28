@@ -16,6 +16,23 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <style>
+        /* 
+        This is a hacky proof of concept to show you the look of what I was describing. 
+        You should use media queries for different dimensions (mobile view looks janky because of 
+        the 80vh), and you want to minimize the mixing of units (vh, px, %)
+        */
+        .test{
+            height: 80vh;
+            background-color: gray;
+        }
+
+        .test-inner{
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
 </head>
  
 <body>
@@ -59,17 +76,20 @@
             <li data-target="#my-slider" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="images/dogincar3.jpg" />
- 
+            <div class="carousel-item active test">
+                <div class="test-inner">
+                    <img class="d-block w-100 pb-5" src="images/dogincar3.jpg" />
+                </div>
             </div>
-            <div class="carousel-item">
-                    <img class="d-block w-100" src="images/car2.jpg" />
-   
+            <div class="carousel-item test">
+                <div class="test-inner">
+                    <img class="d-block w-100 pb-5" src="images/car2.jpg" />
+                </div>
             </div>
-            <div class="carousel-item">
-                    <img class="d-block w-100" src="images/car3.jpg" />
-       
+            <div class="carousel-item test">
+                <div class="test-inner">
+                    <img class="d-block w-100 pb-5" src="images/car3.jpg" />
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#my-slider" role="button" data-slide="prev">
